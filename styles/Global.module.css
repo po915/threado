@@ -1,0 +1,7 @@
+.borderButton {
+  border: 2px solid #e0e7f1;
+  background: none !important;
+  color: #97a6ba !important;
+  border-radius: 8px;
+  margin-right: 5px;
+}

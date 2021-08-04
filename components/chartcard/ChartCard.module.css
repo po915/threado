@@ -1,0 +1,53 @@
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 12px 36px #e5edf2;
+  padding: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  width: 100%;
+}
+
+.boxOne {
+  width: 50%;
+}
+
+.boxOne h3 {
+  font-size: 12px;
+  color: #97a6ba;
+  font-weight: 600;
+  font-family: "Inter";
+}
+
+.boxOne h1 {
+  font-size: 32px;
+  color: #27303f;
+}
+
+.boxTwo {
+  float: right;
+  width: 50%;
+}
+
+.badge {
+  float: right;
+  background-color: rgba(43, 197, 150, 0.2);
+  color: #2bc596;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+}
+
+.badge p {
+  margin-bottom: 0px;
+}
+
+.arrow {
+  margin-top: auto;
+  margin-bottom: auto;
+}
