@@ -1,13 +1,11 @@
 .header {
   display: flex;
   align-items: center;
-  position: fixed;
-  width: calc(100% - 300px);
+  width: 100%;
+  /* position: fixed; */
   background-color: #f3f7fa;
-  margin-top: -20px;
-  margin-left: -15px;
-  padding: 20px 15px;
-  z-index: 99999999;
+  padding: 20px 0px;
+  /* z-index: 99999999; */
 }
 
 .dropDown {
@@ -75,10 +73,4 @@
   height: 43px;
   padding: 8px;
   border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .header {
-    width: 100%;
-  }
 }

@@ -39,7 +39,7 @@ export default function Sidebar() {
   const [isActive, setIsActive] = useState(3)
 
   return (
-    <div className={styles.sidebarWrapper}>
+    <div className={styles.sidebar}>
       <p className={styles.sidebarBrand}>Threado</p>
       {titles.map((title, key) => {
         return (

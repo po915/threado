@@ -21,7 +21,7 @@ export default function Header() {
           <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      <Button className={`borderButton ${styles.bellButton}`}>
+      <Button className={`borderButton ms-auto ${styles.bellButton}`}>
         <Image src={bell} alt="img" />
       </Button>
       <Dropdown className="ms-2">

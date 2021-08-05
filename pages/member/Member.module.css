@@ -79,7 +79,7 @@
   width: 100% !important;
   display: flex;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 10px;
 }
 /*********** Search Box **************/
 .searchBox {
@@ -133,11 +133,13 @@
   width: 324px;
   height: 283px;
   background: #ffffff;
-  box-shadow: 0px 12px 36px rgba(121, 142, 157, 0.17);
+  -webkit-box-shadow: 0px 12px 36px rgb(121 142 157 / 17%);
+  box-shadow: 0px 12px 36px rgb(121 142 157 / 17%);
   border-radius: 8px;
   margin-top: 50px;
-  right: 248px;
+  margin-left: 415px;
   position: absolute;
+  display: -moz-box;
   display: flex;
   padding: 25px;
   display: none;
