@@ -31,34 +31,12 @@
   width: 250px;
 }
 
-.sidebarNav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebarNav > .sidebarBrand {
-  height: 65px;
+.sidebarBrand {
   font-size: 22px;
-  line-height: 26.63px;
   font-weight: 700;
-  color: #27303f;
   text-align: center;
-  text-indent: 0px;
-  padding-top: 25px;
-}
-
-.sidebarNav > .sidebarBrand a {
-  color: #999999;
-  align-items: center;
-}
-
-.sidebarNav > .sidebarBrand a:hover {
-  color: #fff;
-  background: none;
+  margin-top: 20px;
+  color: #27303f;
 }
 
 .sideItem {
@@ -79,6 +57,7 @@
 }
 
 .sideItem.active .itemText {
+  font-weight: 700;
   color: #27303f;
 }
 

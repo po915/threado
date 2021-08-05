@@ -22,3 +22,45 @@ a {
   -webkit-box-shadow: 0 0 0 0.1rem rgb(49 132 253 / 50%) !important;
   box-shadow: 0 0 0 0.1rem rgb(49 132 253 / 50%) !important;
 }
+
+.borderButton {
+  border: 2px solid #e0e7f1 !important;
+  background: none !important;
+  color: #97a6ba !important;
+  border-radius: 8px !important;
+  margin-right: 10px;
+  font-size: 14px !important;
+}
+
+.borderButton.active {
+  color: #27303f !important;
+  font-weight: 500;
+  border-color: transparent !important;
+  background: #ffd954 !important;
+  box-shadow: 0px 4px 18px rgba(255, 217, 84, 0.44) !important;
+}
+
+.borderButton:hover {
+  border-color: #b6cbe7 !important;
+}
+
+.form-check-input:checked {
+  background-color: #2bc596 !important;
+  border-color: #2bc596 !important;
+}
+
+.form-check {
+  margin-bottom: 10px !important;
+}
+
+.form-check-label {
+  display: flex !important;
+}
+
+.form-check-label.all {
+  font-weight: 600;
+}
+
+/* .check-label-icon {
+  margin-right: 5px !important;
+} */

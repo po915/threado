@@ -11,47 +11,55 @@ import event from "../../assets/img/icon/event.svg"
 import staff from "../../assets/img/icon/staff.svg"
 import setting from "../../assets/img/icon/setting.svg"
 import help from "../../assets/img/icon/help.svg"
+import { useState } from "react"
 
 export default function Sidebar() {
+  const icons = [
+    community,
+    activity,
+    member,
+    message,
+    event,
+    staff,
+    setting,
+    help,
+  ]
+
+  const titles = [
+    "Community",
+    "Activity",
+    "Members",
+    "Messages",
+    "Events",
+    "Staff",
+    "Settings",
+    "Help Center",
+  ]
+
+  const [isActive, setIsActive] = useState(3)
+
   return (
     <div className={styles.sidebarWrapper}>
-      <ul className={styles.sidebarNav}>
-        <li className={styles.sidebarBrand}>Threado</li>
-        <li>
-          <span className={styles.sideItem}>
-            <Image src={community} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Community</h5>
+      <p className={styles.sidebarBrand}>Threado</p>
+      {titles.map((title, key) => {
+        return (
+          <span
+            key={key}
+            className={
+              isActive == key
+                ? `${styles.sideItem} ${styles.active}`
+                : styles.sideItem
+            }
+            onClick={() => setIsActive(key)}>
+            <Image
+              src={icons[key]}
+              alt="icon image"
+              className={styles.sideIcon}
+            />
+            <h5 className={styles.itemText}>{title}</h5>
           </span>
-          <span className={styles.sideItem}>
-            <Image src={activity} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Activity</h5>
-          </span>
-          <span className={`${styles.sideItem} ${styles.active}`}>
-            <Image src={member} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Members</h5>
-          </span>
-          <span className={styles.sideItem}>
-            <Image src={message} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Messages</h5>
-          </span>
-          <span className={styles.sideItem}>
-            <Image src={event} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Events</h5>
-          </span>
-          <span className={styles.sideItem}>
-            <Image src={staff} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Staff</h5>
-          </span>
-          <span className={styles.sideItem}>
-            <Image src={setting} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Settings</h5>
-          </span>
-          <span className={styles.sideItem}>
-            <Image src={help} alt="#" className={styles.sideIcon} />
-            <h5 className={styles.itemText}>Help Center</h5>
-          </span>
-        </li>
-      </ul>
+        )
+      })}
     </div>
   )
 }
