@@ -4,7 +4,7 @@ import Image from "next/image"
 // Styles
 import styles from "./Header.module.css"
 // Images
-import bell from "../../assets/img/icon/bell.svg"
+import bell from "../../assets/img/icon/bellNoti.svg"
 import avatar from "../../assets/img/sample-avatar.jpg"
 
 export default function Header() {

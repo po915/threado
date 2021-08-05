@@ -107,7 +107,7 @@
 
 .searchInput::placeholder {
   font-size: 12px;
-  bottom: 2px;
+  opacity: 0.4;
 }
 
 .filterBox {
@@ -128,7 +128,8 @@
 .filterBox p {
   margin-bottom: 0px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 15px;
   color: #27303f;
 }
@@ -213,7 +214,8 @@
 
 .filterSet p {
   margin-bottom: 0px;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .filterApply {
@@ -261,6 +263,7 @@
 .formBox span {
   margin-left: 10px;
   display: flex;
+  align-items: center;
 }
 
 .formBox img {
@@ -268,11 +271,12 @@
 }
 
 .checkAll {
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .checkLabel {
-  font-size: 14px !important;
+  font-size: 12px !important;
 }
 
 .root {
