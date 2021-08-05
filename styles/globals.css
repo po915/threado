@@ -24,7 +24,7 @@ a {
 }
 
 .borderButton {
-  border: 2px solid #e0e7f1 !important;
+  border: 1px solid #e0e7f1 !important;
   background: none !important;
   color: #97a6ba !important;
   border-radius: 8px !important;

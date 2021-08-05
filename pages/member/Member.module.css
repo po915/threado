@@ -102,15 +102,17 @@
   width: 150px;
   outline: none;
   border: none;
+  margin-bottom: 2px;
 }
 
 .searchInput::placeholder {
-  font-size: 14px;
+  font-size: 12px;
+  bottom: 2px;
 }
 
 .filterBox {
   margin-left: auto;
-  width: 169px;
+  width: 179px;
   height: 42px;
   padding: 13px 12px 13px 18px;
   justify-content: space-between;
@@ -174,19 +176,14 @@
   margin-left: 15px;
   box-shadow: 0px 12px 36px #e5edf2;
   cursor: pointer;
-  /* border: 2px solid transparent; */
 }
-
-/* .cusButton:hover {
-  border: 2px solid #e5edf2;
-} */
 
 .cusButton p {
   margin-left: 5px;
   margin-bottom: 0px;
   color: #27303f;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .backYellow {
