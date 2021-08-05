@@ -97,135 +97,132 @@ export default function Member() {
   }
 
   return (
-    <Container onClick={(e) => handleOnClick(e)} className="pt-2">
-      <Row>
-        <Col lg={3}>
-          <Sidebar />
-        </Col>
-        <Col lg={9}>
-          <Header />
-          <div className={styles.subHeader}>
-            <h1 className={styles.title}>Members</h1>
-            <p className={`ms-auto ${styles.interval}`}>Interval:</p>
-            <div className="d-flex">
-              {intervals.map((item, key) => {
-                return (
-                  <Button
-                    key={key}
-                    onClick={(e) => setActiveInterval(key)}
-                    className={
-                      activeInterval == key
-                        ? "borderButton active"
-                        : "borderButton"
-                    }>
-                    {item}
-                  </Button>
-                )
-              })}
-            </div>
-          </div>
-          <Row className="mt-3 card-wrapper">
-            {titles.map((title, key) => {
+    <div onClick={(e) => handleOnClick(e)} className="pt-2 root">
+      <div className="sidebarBox">
+        <Sidebar />
+      </div>
+      <div className="contentBox">
+        <Header />
+        <div className={styles.subHeader}>
+          <h1 className={styles.title}>Members</h1>
+          <p className={`ms-auto ${styles.interval}`}>Interval:</p>
+          <div className="d-flex">
+            {intervals.map((item, key) => {
               return (
-                <Col key={key}>
-                  <ChartCard
-                    title={title}
-                    data={data}
-                    isUp={isUps[key]}
-                    percent={percents[key]}
-                    value={values[key]}
-                  />
-                </Col>
+                <Button
+                  key={key}
+                  onClick={(e) => setActiveInterval(key)}
+                  className={
+                    activeInterval == key
+                      ? "borderButton active"
+                      : "borderButton"
+                  }>
+                  {item}
+                </Button>
               )
             })}
-          </Row>
-          <Toolbar />
-          <Row>
-            <Col className="d-flex mt-2">
-              <div className={styles.searchBox}>
-                <Image alt="img" src={search} className={styles.searchIcon} />
-                <input
-                  type="Search..."
-                  className={styles.searchInput}
-                  placeholder="Search..."
-                />
+          </div>
+        </div>
+        <div className="mt-3 cardBox">
+          {titles.map((title, key) => {
+            return (
+              <ChartCard
+                title={title}
+                data={data}
+                isUp={isUps[key]}
+                percent={percents[key]}
+                value={values[key]}
+                key={key}
+              />
+            )
+          })}
+        </div>
+        <Toolbar />
+        <Row>
+          <Col className="d-flex mt-2">
+            <div className={styles.searchBox}>
+              <Image alt="img" src={search} className={styles.searchIcon} />
+              <input
+                type="Search..."
+                className={styles.searchInput}
+                placeholder="Search..."
+              />
+            </div>
+            <div
+              id="filterBox"
+              className={styles.filterBox}
+              onClick={() => setIsOpen(!isOpen)}>
+              <p>Filters</p>
+              <Image alt="img" src={isOpen ? uarrow : darrow} />
+            </div>
+            <div
+              className={
+                isOpen ? `${styles.dropBox} ${styles.show}` : styles.dropBox
+              }>
+              <div className={styles.boxOne}>
+                {filterSets.map((item, key) => {
+                  return (
+                    <div
+                      key={key}
+                      onClick={() => setActiveFilter(key)}
+                      className={
+                        activeFilter == key
+                          ? `${styles.active} ${styles.filterSet}`
+                          : styles.filterSet
+                      }>
+                      <p>{item}</p>
+                    </div>
+                  )
+                })}
+                <div className={styles.filterApply}>Apply Filters</div>
+                <div className={styles.setDefault}>Set Default</div>
               </div>
-              <div
-                id="filterBox"
-                className={styles.filterBox}
-                onClick={() => setIsOpen(!isOpen)}>
-                <p>Filters</p>
-                <Image alt="img" src={isOpen ? uarrow : darrow} />
+              <div className={styles.boxTwo}>
+                <Form.Group
+                  className={styles.formBox}
+                  controlId="formBasicCheckbox">
+                  <span className="mb-3">
+                    <Form.Check type="checkbox" />
+                    <span className={styles.checkAll}>All Chanels</span>
+                  </span>
+                  <span className="mb-3">
+                    <Form.Check type="checkbox" />
+                    <span className={styles.checkLabel}>
+                      <Image alt="img" src={slack} /> Slack
+                    </span>
+                  </span>
+                  <span className="mb-3">
+                    <Form.Check type="checkbox" />
+                    <span className={styles.checkLabel}>
+                      <Image alt="img" src={discord} /> Discord
+                    </span>
+                  </span>
+                  <span className="mb-3">
+                    <Form.Check type="checkbox" />
+                    <span className={styles.checkLabel}>
+                      <Image alt="img" src={twitter} /> Twitter
+                    </span>
+                  </span>
+                  <span className="mb-3">
+                    <Form.Check type="checkbox" />
+                    <span className={styles.checkLabel}>
+                      <Image alt="img" src={zoom} /> Zoom
+                    </span>
+                  </span>
+                </Form.Group>
               </div>
-              <div
-                className={
-                  isOpen ? `${styles.dropBox} ${styles.show}` : styles.dropBox
-                }>
-                <div className={styles.boxOne}>
-                  {filterSets.map((item, key) => {
-                    return (
-                      <div
-                        key={key}
-                        onClick={() => setActiveFilter(key)}
-                        className={
-                          activeFilter == key
-                            ? `${styles.active} ${styles.filterSet}`
-                            : styles.filterSet
-                        }>
-                        <p>{item}</p>
-                      </div>
-                    )
-                  })}
-                  <div className={styles.filterApply}>Apply Filters</div>
-                  <div className={styles.setDefault}>Set Default</div>
-                </div>
-                <div className={styles.boxTwo}>
-                  <Form.Group
-                    className={styles.formBox}
-                    controlId="formBasicCheckbox">
-                    <span className="mb-3">
-                      <Form.Check type="checkbox" />
-                      <span className={styles.checkAll}>All Chanels</span>
-                    </span>
-                    <span className="mb-3">
-                      <Form.Check type="checkbox" />
-                      <span className={styles.checkLabel}>
-                        <Image alt="img" src={slack} /> Slack
-                      </span>
-                    </span>
-                    <span className="mb-3">
-                      <Form.Check type="checkbox" />
-                      <span className={styles.checkLabel}>
-                        <Image alt="img" src={discord} /> Discord
-                      </span>
-                    </span>
-                    <span className="mb-3">
-                      <Form.Check type="checkbox" />
-                      <span className={styles.checkLabel}>
-                        <Image alt="img" src={twitter} /> Twitter
-                      </span>
-                    </span>
-                    <span className="mb-3">
-                      <Form.Check type="checkbox" />
-                      <span className={styles.checkLabel}>
-                        <Image alt="img" src={zoom} /> Zoom
-                      </span>
-                    </span>
-                  </Form.Group>
-                </div>
-              </div>
-              <div className={styles.cusButton}>
-                <Image alt="img" src={csv} />
-                <p>.CSV</p>
-              </div>
-              <div className={`${styles.cusButton} ${styles.backYellow}`}>
-                <Image alt="img" src={sms} />
-                <p>Bulk Message</p>
-              </div>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+            </div>
+            <div className={styles.cusButton}>
+              <Image alt="img" src={csv} />
+              <p>.CSV</p>
+            </div>
+            <div className={`${styles.cusButton} ${styles.backYellow}`}>
+              <Image alt="img" src={sms} />
+              <p>Bulk Message</p>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </div>
   )
 }

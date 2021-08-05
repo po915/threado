@@ -78,6 +78,7 @@
 .subHeader {
   width: 100% !important;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 10px;
 }
@@ -118,6 +119,7 @@
   box-shadow: 0px 12px 36px #e5edf2;
   border-radius: 8px;
   display: flex;
+  flex-wrap: wrap;
   cursor: pointer;
 }
 
@@ -137,7 +139,7 @@
   box-shadow: 0px 12px 36px rgb(121 142 157 / 17%);
   border-radius: 8px;
   margin-top: 50px;
-  margin-left: 415px;
+  margin-left: 505px;
   position: absolute;
   display: -moz-box;
   display: flex;
@@ -274,4 +276,9 @@
 
 .checkLabel {
   font-size: 14px !important;
+}
+
+.root {
+  max-width: 1366;
+  display: flex;
 }

@@ -61,11 +61,25 @@ a {
   font-weight: 600;
 }
 
-/* .check-label-icon {
-  margin-right: 5px !important;
-} */
-/* 
-.card-wrapper {
-  max-width: 1200px;
+.root {
+  max-width: 1366px;
+  display: flex;
+  justify-content: center;
   margin: auto;
-} */
+}
+
+.sidebarBox {
+  width: 240px;
+}
+
+.contentBox {
+  width: 1056px;
+  margin-left: 20px;
+}
+
+.cardBox {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+}
