@@ -124,7 +124,7 @@ export default function Member() {
             })}
           </div>
         </div>
-        <Row className="mt-3">
+        <Row className="mt-3 card-wrapper">
           {titles.map((title, key) => {
             return (
               <Col key={key}>
